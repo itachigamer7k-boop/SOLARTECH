@@ -1,0 +1,849 @@
+/* =====================================================
+           RESET
+        ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #06120c;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =====================================================
+    VARIÁVEIS
+   ===================================================== */
+
+:root {
+    --verde: #16a34a;
+    --verde-escuro: #087f3d;
+    --verde-claro: #a3e635;
+    --fundo: #06120c;
+    --fundo-2: #0b1d13;
+    --texto: #ffffff;
+    --texto-cinza: #b7c9bf;
+    --borda: rgba(255, 255, 255, 0.12);
+}
+
+/* =====================================================
+           CONTAINER
+        ===================================================== */
+
+.container {
+    width: min(1120px, 92%);
+    margin: auto;
+}
+
+
+/* =====================================================
+           HEADER
+        ===================================================== */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(6, 18, 12, 0.82);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav {
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.logo:hover {
+    transform: scale(1.03);
+}
+
+.logo svg {
+    display: block;
+    height: 55px;
+    width: auto;
+}
+
+/* Esconde o antigo ícone de sol, caso ainda exista */
+.logo-icon {
+    display: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    color: #dcebe3;
+    font-size: 0.95rem;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: var(--verde-claro);
+}
+
+.nav-button {
+    background: var(--verde);
+    padding: 11px 18px;
+    border-radius: 50px;
+
+    font-weight: bold;
+}
+
+/* =====================================================
+           HERO
+        ===================================================== */
+
+.hero {
+    min-height: 800px;
+
+    display: flex;
+    align-items: center;
+
+    padding-top: 120px;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(90deg,
+            rgba(3, 13, 8, 0.96) 0%,
+            rgba(3, 13, 8, 0.78) 45%,
+            rgba(3, 13, 8, 0.25) 100%),
+
+        url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=2000&q=85") center / cover;
+}
+
+.hero-content {
+    max-width: 720px;
+    position: relative;
+    z-index: 2;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 14px;
+
+    border-radius: 50px;
+
+    background: rgba(163, 230, 53, 0.10);
+    border: 1px solid rgba(163, 230, 53, 0.25);
+
+    color: #e7ffc8;
+
+    font-size: 0.85rem;
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.badge-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--verde-claro);
+
+    box-shadow: 0 0 15px var(--verde-claro);
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 6vw, 5.8rem);
+
+    line-height: 0.98;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    background: linear-gradient(90deg,
+            #ffffff,
+            var(--verde-claro));
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+.hero p {
+    color: #d0ded6;
+
+    font-size: 1.15rem;
+
+    max-width: 620px;
+
+    margin-bottom: 30px;
+}
+
+/* =====================================================
+           BOTÕES
+        ===================================================== */
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 15px 23px;
+
+    border-radius: 12px;
+
+    font-weight: 800;
+
+    transition: 0.25s;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg,
+            #22c55e,
+            #0b9a45);
+
+    box-shadow:
+        0 12px 30px rgba(22, 163, 74, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 18px 40px rgba(22, 163, 74, 0.4);
+}
+
+.btn-secondary {
+    border: 1px solid var(--borda);
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+
+/* =====================================================
+           ESTATÍSTICAS
+        ===================================================== */
+
+.stats {
+    position: relative;
+    z-index: 5;
+
+    margin-top: -40px;
+}
+
+.stats-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    background: rgba(13, 37, 24, 0.9);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    backdrop-filter: blur(15px);
+}
+
+.stat {
+    text-align: center;
+
+    padding: 25px;
+
+    border-right: 1px solid var(--borda);
+}
+
+.stat:last-child {
+    border-right: none;
+}
+
+.stat strong {
+    display: block;
+
+    font-size: 1.8rem;
+
+    color: var(--verde-claro);
+}
+
+.stat span {
+    color: var(--texto-cinza);
+
+    font-size: 0.9rem;
+}
+
+/* =====================================================
+           SEÇÕES
+        ===================================================== */
+
+section {
+    padding: 100px 0;
+}
+
+.section-header {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+}
+
+.section-tag {
+    color: var(--verde-claro);
+
+    font-size: 0.8rem;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+.section-header h2 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+
+    line-height: 1.05;
+
+    margin: 12px 0 15px;
+}
+
+.section-header p {
+    color: var(--texto-cinza);
+}
+
+/* =====================================================
+           SERVIÇOS
+        ===================================================== */
+
+#servicos {
+    background:
+        radial-gradient(circle at 15% 20%,
+            rgba(34, 197, 94, 0.08),
+            transparent 25%),
+
+        var(--fundo);
+}
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.service-card {
+    position: relative;
+
+    padding: 32px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(180deg,
+            rgba(255, 255, 255, 0.075),
+            rgba(255, 255, 255, 0.035));
+
+    border: 1px solid var(--borda);
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(163, 230, 53, 0.4);
+}
+
+
+
+.service-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 9px
+}
+
+.service-card p {
+    color: var(--muted);
+    font-size: .93rem
+}
+
+.service-card ul {
+    margin-top: 18px;
+    list-style: none;
+    display: grid;
+    gap: 8px;
+    color: #d8e7de;
+    font-size: .84rem;
+}
+
+.service-card li:before {
+    content: "✓";
+    color: var(--lime);
+    font-weight: 900;
+    margin-right: 8px
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 17px;
+
+    background: rgba(163, 230, 53, 0.12);
+
+    border: 1px solid rgba(163, 230, 53, 0.2);
+
+    font-size: 28px;
+
+    margin-bottom: 22px;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: var(--texto-cinza);
+
+    font-size: 0.95rem;
+}
+
+/* =====================================================
+           SOBRE / DIFERENCIAIS
+        ===================================================== */
+
+.why {
+    background:
+        linear-gradient(180deg,
+            #0a1c12,
+            #06120c);
+}
+
+.why-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.why-image {
+    min-height: 520px;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    border: 1px solid var(--borda);
+
+    background:
+        linear-gradient(180deg,
+            rgba(0, 0, 0, 0.05),
+            rgba(0, 0, 0, 0.45)),
+
+        url("https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=1200&q=85") center / cover;
+}
+
+.floating-info {
+    position: absolute;
+
+    left: 22px;
+    bottom: 22px;
+
+    padding: 18px 20px;
+
+    border-radius: 17px;
+
+    background: rgba(5, 19, 12, 0.87);
+
+    backdrop-filter: blur(12px);
+
+    border: 1px solid var(--borda);
+
+    max-width: 290px;
+}
+
+.floating-info strong {
+    display: block;
+
+    color: var(--verde-claro);
+
+    font-size: 1.4rem;
+}
+
+.why-content h2 {
+    font-size: clamp(2rem, 4vw, 3.1rem);
+
+    line-height: 1.05;
+
+    margin: 12px 0 18px;
+}
+
+.why-content>p {
+    color: var(--texto-cinza);
+}
+
+.check-list {
+    display: grid;
+
+    gap: 18px;
+
+    margin-top: 30px;
+}
+
+.check {
+    display: flex;
+
+    gap: 12px;
+}
+
+.check-icon {
+    min-width: 26px;
+    height: 26px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--verde);
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.check strong {
+    display: block;
+
+    margin-bottom: 2px;
+}
+
+.check span {
+    color: var(--texto-cinza);
+
+    font-size: 0.92rem;
+}
+
+
+/* =====================================================
+           CTA
+        ===================================================== */
+
+.cta {
+    padding-top: 0;
+}
+
+.cta-box {
+    position: relative;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    padding: 70px 40px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(120deg,
+            rgba(22, 163, 74, 0.96),
+            rgba(8, 89, 47, 0.96)),
+
+        url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80") center / cover;
+}
+
+.cta-box h2 {
+    max-width: 700px;
+
+    margin: 0 auto 15px;
+
+    font-size: clamp(2rem, 4vw, 3.2rem);
+
+    line-height: 1.05;
+}
+
+.cta-box p {
+    max-width: 600px;
+
+    margin: auto auto 28px;
+
+    color: #dcfce7;
+}
+
+.cta-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 15px 24px;
+
+    border-radius: 12px;
+
+    background: white;
+
+    color: var(--verde-escuro);
+
+    font-weight: 900;
+
+    transition: 0.25s;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =====================================================
+           FOOTER
+        ===================================================== */
+
+footer {
+    border-top: 1px solid var(--borda);
+
+    padding: 30px 0;
+
+    color: #8ea69a;
+}
+
+.footer-content {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+footer strong {
+    color: #dff7e8;
+}
+
+/* =====================================================
+           WHATSAPP FLUTUANTE
+        ===================================================== */
+
+.whatsapp {
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    z-index: 9999;
+
+    width: 64px;
+    height: 64px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #25D366;
+
+    color: white;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.35),
+        0 0 0 6px rgba(37, 211, 102, 0.13);
+
+    transition: 0.25s;
+
+    animation: pulse 2.2s infinite;
+}
+
+.whatsapp:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp svg {
+    width: 33px;
+    height: 33px;
+
+    fill: currentColor;
+}
+
+.whatsapp-label {
+    position: absolute;
+
+    right: 75px;
+
+    white-space: nowrap;
+
+    background: #07150e;
+
+    border: 1px solid var(--borda);
+
+    padding: 8px 12px;
+
+    border-radius: 9px;
+
+    color: white;
+
+    font-size: 0.82rem;
+
+    opacity: 0;
+
+    transform: translateX(5px);
+
+    pointer-events: none;
+
+    transition: 0.2s;
+}
+
+.whatsapp:hover .whatsapp-label {
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 10px 35px rgba(0, 0, 0, 0.35),
+            0 0 0 6px rgba(37, 211, 102, 0.13);
+    }
+
+    50% {
+        box-shadow:
+            0 10px 35px rgba(0, 0, 0, 0.35),
+            0 0 0 14px rgba(37, 211, 102, 0);
+    }
+}
+
+
+/* =====================================================
+           RESPONSIVO
+        ===================================================== */
+
+@media (max-width: 850px) {
+
+    nav a:not(.nav-button) {
+        display: none;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-image {
+        min-height: 400px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 720px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .stats-box {
+        grid-template-columns: 1fr;
+    }
+
+    .stat {
+        border-right: none;
+
+        border-bottom: 1px solid var(--borda);
+    }
+
+    .stat:last-child {
+        border-bottom: none;
+    }
+
+    section {
+        padding: 75px 0;
+    }
+
+    .cta-box {
+        padding: 50px 22px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .whatsapp {
+        right: 16px;
+        bottom: 16px;
+    }
+}
