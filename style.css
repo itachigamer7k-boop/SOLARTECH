@@ -847,3 +847,19 @@ footer strong {
         bottom: 16px;
     }
 }
+
+/* ============================================
+   AJUSTE DO BOTÃO "SOLICITAR ORÇAMENTO" NO MOBILE
+   ============================================ */
+
+@media (max-width: 768px) {
+
+    .nav-button {
+        font-size: 0.75rem;        /* letra menor */
+        padding: 6px 12px;         /* menos espaço interno */
+        border-radius: 20px;       /* cantos mais suaves */
+        line-height: 1.2;
+        white-space: nowrap;       /* não quebra em 2 linhas */
+    }
+
+}
