@@ -12,15 +12,15 @@
       <line x1="27" y1="63" x2="21" y2="69"/>
     </g>
     <g transform="translate(30, 55) skewX(-15)">
-      <rect x="0" y="0" width="60" height="38" rx="3" fill="#0B6E4F"/>
-      <rect x="3" y="3" width="25" height="15" rx="1.5" fill="#2A9D8F"/>
-      <rect x="32" y="3" width="25" height="15" rx="1.5" fill="#2A9D8F"/>
-      <rect x="3" y="20" width="25" height="15" rx="1.5" fill="#2A9D8F"/>
-      <rect x="32" y="20" width="25" height="15" rx="1.5" fill="#2A9D8F"/>
+      <rect x="0" y="0" width="60" height="38" rx="3" fill="#FFFFFF"/>
+      <rect x="3" y="3" width="25" height="15" rx="1.5" fill="##0752B5"/>
+      <rect x="32" y="3" width="25" height="15" rx="1.5" fill="##0752B5"/>
+      <rect x="3" y="20" width="25" height="15" rx="1.5" fill="##0752B5"/>
+      <rect x="32" y="20" width="25" height="15" rx="1.5" fill="##0752B5"/>
     </g>
     <path d="M 88 30 L 78 48 L 86 48 L 80 68 L 96 44 L 88 44 Z" fill="#FFB703" stroke="#E09F00" stroke-width="1"/>
   </g>
   <text x="135" y="68" font-family="Arial, sans-serif" font-size="42" font-weight="800" fill="#1686c2">Solar</text>
   <text x="248" y="68" font-family="Arial, sans-serif" font-size="42" font-weight="800" fill="#0d8a62">Tech</text>
-  <text x="137" y="90" font-family="Arial, sans-serif" font-size="10" font-weight="500" fill="#8fabb9" letter-spacing="3">ENERGIA SOLAR INTELIGENTE</text>
+  <text x="137" y="90" font-family="Arial, sans-serif" font-size="09" font-weight="500" fill="#8fabb9" letter-spacing="3">ENERGIA SOLAR INTELIGENTE</text>
 </svg>
