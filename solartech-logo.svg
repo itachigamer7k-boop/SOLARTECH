@@ -13,10 +13,10 @@
     </g>
     <g transform="translate(30, 55) skewX(-15)">
       <rect x="0" y="0" width="60" height="38" rx="3" fill="#FFFFFF"/>
-      <rect x="3" y="3" width="25" height="15" rx="1.5" fill="##0752B5"/>
-      <rect x="32" y="3" width="25" height="15" rx="1.5" fill="##0752B5"/>
-      <rect x="3" y="20" width="25" height="15" rx="1.5" fill="##0752B5"/>
-      <rect x="32" y="20" width="25" height="15" rx="1.5" fill="##0752B5"/>
+      <rect x="3" y="3" width="25" height="15" rx="1.5" fill="#0752B5"/>
+      <rect x="32" y="3" width="25" height="15" rx="1.5" fill="#0752B5"/>
+      <rect x="3" y="20" width="25" height="15" rx="1.5" fill="#0752B5"/>
+      <rect x="32" y="20" width="25" height="15" rx="1.5" fill="#0752B5"/>
     </g>
     <path d="M 88 30 L 78 48 L 86 48 L 80 68 L 96 44 L 88 44 Z" fill="#FFB703" stroke="#E09F00" stroke-width="1"/>
   </g>
